@@ -30,7 +30,7 @@ local function lsphandlers(lspconfig)
     ["lua_ls"] = function()
       lspconfig.lua_ls.setup {
         on_attach = on_attach,
-      --  capabilities = capabilities,
+        --capabilities = capabilities,
         settings = {
           Lua = {
             diagnostics = {
