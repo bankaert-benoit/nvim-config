@@ -10,11 +10,11 @@ local lspservers = {
 }
 
 local function lsphandlers(lspconfig)
-  --local capabilities = require("cmp_nvim_lsp").default_capabilities()
+  local capabilities = require("cmp_nvim_lsp").default_capabilities()
   local on_attach = require("mapping.lsp")
   local opts = {
     on_attach = on_attach,
-    --capabilities = capabilities,
+    capabilities = capabilities,
   }
 
   local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
@@ -30,7 +30,7 @@ local function lsphandlers(lspconfig)
     ["lua_ls"] = function()
       lspconfig.lua_ls.setup {
         on_attach = on_attach,
-        --capabilities = capabilities,
+        capabilities = capabilities,
         settings = {
           Lua = {
             diagnostics = {
