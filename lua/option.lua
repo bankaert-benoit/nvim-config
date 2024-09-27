@@ -1,4 +1,5 @@
-vim.cmd(":set tabstop=2")
-vim.cmd(":set shiftwidth=2")
-vim.cmd(":set number")
-vim.cmd(":set wrap!")
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.number = true
+vim.opt.wrap = false
+vim.opt.title = true
