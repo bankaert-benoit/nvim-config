@@ -1,0 +1,5 @@
+require("mapping.custom")
+require("mapping.lsp")
+require("mapping.neotree")
+require("mapping.telescope")
+require("mapping.terminal")
