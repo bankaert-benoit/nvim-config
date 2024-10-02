@@ -3,3 +3,4 @@ vim.opt.shiftwidth = 2
 vim.opt.number = true
 vim.opt.wrap = false
 vim.opt.title = true
+vim.opt.updatetime = 250
