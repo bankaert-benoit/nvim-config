@@ -2,7 +2,7 @@ local DEFAULT_CONFIG = { "prettier" }
 local DEFAULT_PRETTIER_ARGS = {
 	"--single-quote",
 	"--bracket-same-line",
-	"--end-of-line crlf",
+	"--end-of-line=crlf",
 }
 
 return {
