@@ -5,6 +5,6 @@ return {
 	opts = {
 		enabled = true,
 		date_format = "%r",
-		message_template = "	<summary> • <date> • <author>",
+		message_template = "<date> • <author>",
 	},
 }
