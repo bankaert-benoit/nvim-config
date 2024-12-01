@@ -1,35 +1,27 @@
-local lsp = require("config.lsp")
-
 return {
 	{
 		"williamboman/mason.nvim",
-		opts = {
-			ui = {
-				icons = {
-					package_installed = "✓",
-					package_pending = "➜",
-					package_uninstalled = "✗",
-				},
-			},
-		},
+		name = "Mason",
+		config = function ()
+			require("mason").setup()
+		end
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		dependencies = {
-			{
-				"neovim/nvim-lspconfig",
-				event = { "BufReadPre", "BufNewFile" },
-			},
-			{ "hrsh7th/cmp-nvim-lsp" },
-		},
-		config = function()
-			local lspconfig = require("lspconfig")
-			local mason_lspconfig = require("mason-lspconfig")
-			mason_lspconfig.setup({
-				ensure_installed = lsp.lspservers,
-				automatic_installation = true,
-				handlers = lsp.lsphandlers(lspconfig),
+		name = "Mason LspConfig",
+		config = function ()
+			require("mason-lspconfig").setup({
+				ensure_installed = { "lua_ls" }
 			})
-		end,
+		end
 	},
+	{
+		"neovim/nvim-lspconfig",
+		name = "Nvim LspConfig",
+		config = function ()
+			local lspconfig = require("lspconfig")
+			lspconfig.lua_ls.setup({})
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show diagnostic" })
+		end
+	}
 }
