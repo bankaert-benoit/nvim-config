@@ -1,7 +1,7 @@
 require("mapping.custom")
 require("mapping.lsp")
-require("mapping.neotree")
 require("mapping.telescope")
 require("mapping.terminal")
 require("mapping.autocmd.init")
 require("mapping.barbar")
+require("mapping.oil")

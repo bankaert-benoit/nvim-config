@@ -7,6 +7,7 @@ local lspservers = {
   "lua_ls",
   "ts_ls",
 	"svelte",
+	"tailwindcss"
 }
 
 local function lsphandlers(lspconfig)
@@ -39,7 +40,14 @@ local function lsphandlers(lspconfig)
           }
         }
       }
-    end
+    end,
+		["angularls"] = function()
+			lspconfig.angularls.setup {
+				on_attach = on_attach,
+				capabilities = capabilities,
+				filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx", "htmlangular" },
+			}
+		end,
   }
 end
 
