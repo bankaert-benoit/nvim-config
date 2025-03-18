@@ -1,4 +1,4 @@
-local SERVERS = { "lua_ls" }
+local SERVERS = { "lua_ls", "rust_analyzer" }
 
 return {
 	{
@@ -22,7 +22,15 @@ return {
 		name = "Nvim LspConfig",
 		config = function()
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
+			lspconfig.lua_ls.setup({
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" }
+						}
+					}
+				}
+			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show diagnostic" })
 		end,
 	},
