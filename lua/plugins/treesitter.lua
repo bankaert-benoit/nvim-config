@@ -1,4 +1,4 @@
-local ENSURE_INSTALLED = { "lua", "html", "css", "typescript", "javascript", "yaml", "svelte", "jsdoc" }
+local ENSURE_INSTALLED = { "lua", "html", "css", "typescript", "javascript", "yaml", "svelte", "jsdoc", "java", "angular" }
 
 return {
 	"nvim-treesitter/nvim-treesitter",

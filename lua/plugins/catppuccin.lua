@@ -7,6 +7,6 @@ return {
 			flavour = "frappe",
 			mason = false
 		})
-		vim.cmd(":colorscheme catppuccin")
+		-- vim.cmd(":colorscheme catppuccin")
 	end
 }

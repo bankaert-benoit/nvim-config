@@ -8,7 +8,7 @@ local lspservers = {
   "ts_ls",
   "jdtls",
   "clangd",
-	"rust_analyzer"
+	"rust_analyzer",
 }
 
 local function lsphandlers(lspconfig)
