@@ -6,7 +6,11 @@ return {
 			["<backspace>"] = "actions.parent"
 		},
 		float = {
-			preview_split = "right"
+			preview_split = "right",
+			border = "rounded",
+		},
+		view_options = {
+			show_hidden = true,
 		}
 	},
 	dependencies = {
