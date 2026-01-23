@@ -26,7 +26,7 @@ return {
 			for _, module in ipairs(modules) do
 				require('mini.' .. module.name).setup(module.setup);
 			end
-			vim.cmd.colorscheme('minispring');	
+			vim.cmd.colorscheme('minispring');
 		end,
 	},
 };

@@ -13,6 +13,7 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "ts_ls", "jsonls" }, -- LSP automatiques
       })
+			vim.lsp.enable({ "lua_ls", "ts_ls", "jsonls" })
     end,
   },
 }
