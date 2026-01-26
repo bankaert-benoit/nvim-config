@@ -11,9 +11,9 @@ return {
     dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "jsonls" }, -- LSP automatiques
+        ensure_installed = { "lua_ls", "ts_ls", "jsonls", "angularls" },
       })
-			vim.lsp.enable({ "lua_ls", "ts_ls", "jsonls" })
+			vim.lsp.enable({ "lua_ls", "ts_ls", "jsonls", "angularls" })
     end,
   },
 }
